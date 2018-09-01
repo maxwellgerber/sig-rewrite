@@ -116,3 +116,33 @@ fn({
 });
 // "arg1, then arg2, arg3, , not default",  
 ```
+
+## Notes
+Usage with ES6 classes is not supported directly. The constructor may be wrapped first in order to facilitate rewriting.
+
+```javascript
+class foo{
+  constructor(bar, baz, wux) {
+    ...
+  }
+}
+// invalid
+sigRewrite(fooFactory, opts);
+
+const fooFactory = (bar, baz, wux) => new foo(...arguments);
+// valid
+sigRewrite(fooFactory, opts);
+``` 
+
+Usage with ES6 unpacking and default syntax is similarly unsupported.
+```javascript
+function myFunction(foo, bar, [baz, wux], {opt1, opt2}) {
+  ...
+}
+// invalid
+sigRewrite(myFunction, opts);
+
+const wrapper = (foo, bar, arr, obj) => myFunction(...arguments);
+// valid
+sigRewrite(wrapper, opts);
+```
