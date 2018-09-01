@@ -1,0 +1,35 @@
+{
+  "name": "sig-rewrite",
+  "version": "0.0.0",
+  "description": "Rewrite legacy function signatures",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js lib test",
+    "pretest": "npm run lint",
+    "test": "mocha --recursive test",
+    "bench": "bench benchmarks"
+  },
+  "keywords": [
+    "airity",
+    "legacy",
+    "metaprogramming"
+  ],
+  "files": [
+    "index.js",
+    "src/**"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maxwellgerber/sig-rewrite.git"
+  },
+  "author": "Maxwell Gerber",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5",
+    "tape": "^4.9.1"
+  }
+}
