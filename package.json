@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint index.js lib test",
     "pretest": "npm run lint",
-    "test": "mocha --recursive test",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha",
+    "report-coverage": "codecov",
     "bench": "bench benchmarks"
   },
   "keywords": [
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.2.0",
     "sinon": "^6.1.5",
-    "tape": "^4.9.1"
+    "blanket": "^1.2.3",
+    "should": "^13.2.3"
   }
 }
