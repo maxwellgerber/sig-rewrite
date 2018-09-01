@@ -8,17 +8,18 @@ maintainable code while minimizing boilerplate.
 ## Docs
 #### `sigRewrite(fn, opts)`
 Return a wrapped version of `fn` with a different signature, as dictated by `opts`. Parameters that may be set on opts:
-* `opts.toOptions bool|String[]` 
+* `opts.toOptions` `bool|String[]` 
   * if true - function signature is replaced by a dictionary where all keys map to positional parameters of the same name. 
     * ex: `fn(foo, bar, baz, wux) => fn({foo, bar, baz})`
   * If an array - positional parameters in the array are joined into an options object, and all other parameters are pushed to the left
     * ex: `fn(foo, bar, baz, wux) => fn(foo, baz, {bar, wux})`
-* `opts.toBuilderPattern bool`
+* `opts.toBuilderPattern` `bool`
   * Return a builder instance with methods attached as demonstrated [below](#sample-usage-2---builder-dsl-syntax-for-free:)
-* `opts.builderTemplate function(string) => string`
-  * A function for templating the names of the methods attached to the builder instance. Default `param => "with" + toCamelCase(param)`
-* `opts.isConstructor bool` Whether or not `fn` must be invoked with the `new` keyword
-* `opts.defaults object` A map of param names to a default value that should be provided to them
+* `opts.builderTemplate` `function(string) => string`
+  * A function for templating the names of the methods attached to the builder instance
+  * Default `param => "with" + toCamelCase(param)`
+* `opts.isConstructor` `bool` Whether or not `fn` must be invoked with the `new` keyword
+* `opts.defaults` `object` A map of param names to a default value that should be provided to them
   * The default value will be reused across all function calls, so be careful with passing in mutable objects
 
 At least argument in (`toOptions`, `toBuilderpattern`, `defaults`) is required
