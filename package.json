@@ -31,5 +31,8 @@
     "mocha": "^5.2.0",
     "sinon": "^6.1.5",
     "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "should": "^13.2.3"
   }
 }
