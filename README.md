@@ -2,6 +2,9 @@
 `sig-rewrite` contains a handful of tools for redefining function signatures in order to produce more legible and
 maintainable code while minimizing boilerplate.
 
+[![Build Status](https://travis-ci.org/maxwellgerber/sig-rewrite.svg?branch=master)](https://travis-ci.org/maxwellgerber/sig-rewrite)
+[![codecov](https://codecov.io/gh/maxwellgerber/sig-rewrite/branch/master/graph/badge.svg)](https://codecov.io/gh/maxwellgerber/sig-rewrite)
+
 ## Docs
 #### `sigRewrite(fn, opts)`
 Return a wrapped version of `fn` with a different signature, as dictated by `opts`. Parameters that may be set on opts:
