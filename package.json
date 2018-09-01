@@ -29,8 +29,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.2.0",
-    "sinon": "^6.1.5",
-    "tape": "^4.9.1"
+    "sinon": "^6.1.5"
   },
   "dependencies": {
     "should": "^13.2.3"
